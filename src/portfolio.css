@@ -1,9 +1,11 @@
 
 
+
+
 .thumbnail {
     object-fit: cover !important;
-    height: 250px !important;
-    width: 250px !important;
+    height: 100px !important;
+    width: 100px !important;
     opacity: 1;
 	-webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
@@ -56,8 +58,10 @@
   }
   
 #SN {
+    position: auto;
     width: 4%;
-
+    width: 5vw;
+    height: 5vw;
     background-color: rgb(48, 19, 19);
   animation-name: example;
   animation-duration: 0.5s;
@@ -258,19 +262,22 @@ body {
 
 
 
-.square-item{
-    background: black;
-    color: white;
-    margin-right: 1%;
-    margin-top:10%;
-    padding: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
-    text-align: center;
-    width:200px;
-
-}
 
 .project-menu {
     text-align: center;
+    width:100%;
+}
+
+.project-menu-item {
+    
+    background: black;
+    color: white;
+    margin-right: 1%;
+    margin-top:5%;
+    padding: 1%;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+    text-align: center;
+    width:50%;
+
 }

@@ -19,19 +19,14 @@ import SN from './SN-icon.png';
 
 
 class Home extends Component {
-    
-
-      createGrid(amount) {
-        let grid=[]
-        for (let j = 0; j < amount; j++) {
-        grid.push(<Image id="SN" src={SN}/>)
-    }
-    return (
-        grid
-    )
-}
-    items() {
-        let array=["glad","ledsen","hej"]
+    constructor() {
+        super();
+        this.state = {
+          randomitem : null
+        }
+      }
+      items() {
+        let array=["interactive","cool","super"]
      
         var randomitem = array[Math.floor(Math.random() * array.length)];
         
@@ -40,16 +35,25 @@ class Home extends Component {
         randomitem
     )
     }
-    componentDidMount() {
-        var intervalId = setInterval(this.timer, 1000);
-        // store intervalId in the state so it can be accessed later:
-        this.createGrid()
-     }
-     
-     componentWillUnmount() {
-        // use intervalId from the state to clear the interval
-        clearInterval(this.state.intervalId);
-     }
+      componentDidMount() {
+        setInterval( () => {
+          this.setState({
+            curTime : this.items()
+          })
+        },1000)
+      }
+
+      createGrid(amount) {
+        let grid=[]
+        for (let j = 0; j < amount; j++) {
+        grid.push(<square id="SN"></square>)
+    }
+    return (
+        grid
+    )
+}
+    
+
      
     
 
@@ -60,7 +64,9 @@ class Home extends Component {
       return (
             
             <div className="landing">
-                <div className="start-title">I am {randomitem}</div>
+                <div className="start-title">I am {randomitem}<div>
+        
+          </div></div>
                  {this.createGrid(400)}
             
             <div id="pot" className="wrap">

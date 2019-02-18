@@ -27,7 +27,7 @@ class Home extends Component {
       return (
           <div>
 
-              <Image src={desk} fluid />
+{/*      GAMMALT         
                <Container>
                 <h2 className="heading text-bold">Projects</h2>
                     <Row>
@@ -40,12 +40,17 @@ class Home extends Component {
                         <Col xs={6} md={4}>
                             <Thumbnail imgsrc={ol}/>
                         </Col>
-
-                        {/* // <Col>
-                        // <Thumbnail imgsrc={ol}/>
-                        // </Col> */}
+                        <Col xs={6} md={4}>
+                            <Thumbnail imgsrc={AR}/>
+                        </Col>
                     </Row>
-                </Container>;
+                </Container>; */}
+
+                <Row className="project-menu">
+                <Col className="project-menu-item" href="#OsqledARen">First</Col>
+                <Col className="project-menu-item" href="#2">Second</Col>
+                <Col className="project-menu-item" href="#3">Third</Col>
+            </Row>
 
           </div>
     );
