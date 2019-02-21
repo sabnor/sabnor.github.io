@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "gh-pages": "^2.0.1",
     "install": "^0.12.2",
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.5",
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+     "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +30,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage" : "http://sabnor.github.io/"
+  "homepage": "http://sabinanordell.me/"
 }

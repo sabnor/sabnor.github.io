@@ -1,15 +1,17 @@
 
-
+   .UnderConstruction{
+    position: fixed;
+    bottom: 18%;
+    width: 30%;
+    z-index: 1;
+    color: black;
+    border-color: rgb(228, 143, 157);;
+    background-color: rgb(228, 143, 157);
+   }
 
 
 .thumbnail {
-    object-fit: cover !important;
-    height: 100px !important;
-    width: 100px !important;
-    opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-    margin:10%;
+    
 }
 
 .thumbnail:hover {
@@ -42,7 +44,11 @@
 
     background-color: rgb(51, 51, 51);
     color: white;
+    z-index: 0;
+    padding: 10px;
    }
+
+
    #navbar-drop-image {
     display: none;
 }
@@ -53,8 +59,8 @@
 
    /* HOME PAGE ANIMATION */
    @keyframes example {
-    to {background-color: white;}
-    from {background-color: rgb(197, 197, 197);}
+    to {fill: white;}
+    from {fill: rgb(197, 197, 197);}
   }
   
 #SN {
@@ -62,7 +68,8 @@
     width: 4%;
     width: 5vw;
     height: 5vw;
-    background-color: rgb(48, 19, 19);
+    background-color: rgb(197, 9, 9);
+    fill: red;
   animation-name: example;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -81,8 +88,7 @@
 
 #AR {
     width: 40%;
-    margin: 10%;
-    cursor: zoom-in;
+   
 }
 /* Types */
 
@@ -157,8 +163,9 @@ body {
   top: 0;
   vertical-align: middle;
   background-color: rgb(245, 240, 237);
-  width: 100%;
-  max-width: 100%;
+  width: 110%;
+  /* max-width: 100%; */
+  z-index:1;
 
 }
 
@@ -175,15 +182,16 @@ body {
 }
 .start-title {
     position: fixed;
-    width: auto;
+    width: 100%;
     font-weight: 900;
     font-size: 140px;
     vertical-align: middle;
-    text-align: center;
+   
     margin-top: 10%;
     cursor: default;
     pointer-events: none;
-    float: center;
+    
+    text-align: center;
 
 }
 
@@ -266,10 +274,11 @@ body {
 .project-menu {
     text-align: center;
     width:100%;
+    /* position: relative; */
 }
 
 .project-menu-item {
-    
+    margin: auto;
     background: black;
     color: white;
     margin-right: 1%;
@@ -278,6 +287,92 @@ body {
     /* padding-left: 2%;
     padding-right: 2%; */
     text-align: center;
-    width:50%;
+    width: 50%;
+  
 
 }
+
+
+
+
+
+.parallax {
+    background-image: url("https://images.unsplash.com/photo-1526376043067-5af36c35cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2539&q=80");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+
+  .smiley-face {
+   
+      position: fixed;
+      width: 100%;
+      font-weight: 800;
+      font-size: 70px;
+      vertical-align: middle;
+     
+      margin-top: 10%;
+      cursor: default;
+      pointer-events: none;
+      
+      text-align: center;
+  
+  }
+
+
+  .project-grid {
+    margin-top:6%;
+    margin-bottom:16%;
+    text-align:center;
+    z-index: -2;
+}
+.portfolio-item {
+    position: relative;
+  text-align: center;
+  color: white;
+}
+
+  .portfolio-image {
+  
+    width:380px;
+    height:380px;
+    z-index: -2;
+
+
+    object-fit: cover !important;
+  
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    margin:0%;
+
+
+  }
+
+  .portfolio-image:hover {
+      opacity: 0.15;
+  }
+
+  .portfolio-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    pointer-events: none; 
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    margin:0%;
+ 
+    opacity:0;
+  
+  }
+  .portfolio-image:hover ~ .portfolio-text{
+  
+      
+      opacity:1;
+  }

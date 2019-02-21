@@ -46,12 +46,22 @@ class Home extends Component {
                     </Row>
                 </Container>; */}
 
-                <Row className="project-menu">
+            <Row className="project-menu">
                 <Col className="project-menu-item" href="#OsqledARen">First</Col>
                 <Col className="project-menu-item" href="#2">Second</Col>
                 <Col className="project-menu-item" href="#3">Third</Col>
             </Row>
+            {/* <div className="parallax"></div> */}
 
+            <div className="project-grid">
+                <Image id="AR" src={AR}/>
+                <Image id="AR" src={AR}/>
+                <Image id="AR" src={AR}/>
+                <Image id="AR" src={AR}/>
+                <Image id="AR" src={AR}/>
+                <Image id="AR" src={AR}/>
+            </div>
+   
           </div>
     );
 }

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Image from 'react-bootstrap/Image';
-import Carousel from 'react-bootstrap/Carousel';
-import logo from './portfolio-icon.png';
-import AR from './osqledARen.png';
+// import Container from 'react-bootstrap/Container';
+// import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+// import Image from 'react-bootstrap/Image';
+// import Carousel from 'react-bootstrap/Carousel';
+// import logo from './portfolio-icon.png';
+// import AR from './osqledARen.png';
 import './portfolio.css';
-import LinkContainer from 'react-router-bootstrap';
+// import LinkContainer from 'react-router-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 
 
@@ -46,7 +46,9 @@ class Home extends Component {
       createGrid(amount) {
         let grid=[]
         for (let j = 0; j < amount; j++) {
-        grid.push(<square id="SN"></square>)
+        grid.push(<svg width="150" height="150">
+        <rect id="SN" x="50" y="20" width="150" height="150" color="red" />
+      </svg>)
     }
     return (
         grid
@@ -67,8 +69,9 @@ class Home extends Component {
                 <div className="start-title">I am {randomitem}<div>
         
           </div></div>
-                 {this.createGrid(400)}
-            
+                 {this.createGrid(32)}
+                 {/* <div className="parallax"></div>  */}
+{/*             
             <div id="pot" className="wrap">
             <div className="l">L</div>
             <div className="o">O</div>
@@ -77,7 +80,7 @@ class Home extends Component {
             <div className="i">I</div>
             <div className="n">N</div>
             <div className="g">G</div>
-          </div>
+          </div> */}
           </div>
 
     );

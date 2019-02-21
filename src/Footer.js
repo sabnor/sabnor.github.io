@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import {Row, Col, Image} from 'react-bootstrap';
+import SN from './SN-logo.png';
 class Footer extends Component {
      
 
     render() {
       return (
         <footer>
-          <Row>
-            <Col>
-              <div className="text-center">
-                <h4 className="bold-text">Kontakt</h4>
-                <p>Telephone: +460707263169</p>
-              </div>
-            </Col>
-        </Row>
+          <h4 className="text-center bold-text">Contact</h4>
+          <div className="text-center">Sabina Nordell</div>
+              <Row className="">
+   
+                <Col className="text-right">
+                    Vasavägen 34<br/>
+                    18278 Stocksund
+                </Col>
+
+                <Col>
+             
+                    sabnor@kth.se<br/>
+                    +460707263169<br/>
+                </Col>
+              
+           
+              </Row>
+            
        </footer>
 
            );
